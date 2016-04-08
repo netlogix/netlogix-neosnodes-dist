@@ -1,0 +1,81 @@
+Netlogix\JsonApiOrg\Resource\Information\ExposableTypeMap:
+  properties:
+
+#                                                                        #
+# Here a each individual PHP class (left side) maps to a distinct        #
+# public type string (right side).                                       #
+#                                                                        #
+
+    oneToOneTypeToClassMap:
+      value:
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\CreateNodeCommand': 'Netlogix.JsonApiOrg.NeosNodes:CreateNodeCommand'
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\MoveNodeCommand': 'Netlogix.JsonApiOrg.NeosNodes:MoveNodeCommand'
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\PublishAllCommand': 'Netlogix.JsonApiOrg.NeosNodes:PublishAllCommand'
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\PublishNodesCommand': 'Netlogix.JsonApiOrg.NeosNodes:PublishNodesCommand'
+
+
+#                                                                        #
+# Here a single PHP class (right side of the upper section) maps to      #
+# a couple of public type strings (left side of the upper section).      #
+#                                                                        #
+# To have them distinguished during rendering the Resource::getType()    #
+# method returns an individual string that ist derived from the class    #
+# name and the internal type value (node type).                          #
+#                                                                        #
+# Each individual derived type (left side of the lower section) is       #
+# mapped to a distinct PHP class (right side of the lower section)       #
+#                                                                        #
+# Obviously that something we can enhance to be automatically            #
+# discovered.                                                            #
+
+    typeNameToClassIdentifierMap:
+      value:
+        'unstructured':                          'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos:ContentCollection':          'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos:Shortcut':                   'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos:PluginView':                 'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:Page':             'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:Text':             'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:Image':            'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:TextWithImage':    'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:Headline':         'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:TwoColumn':        'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:ThreeColumn':      'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:FourColumn':       'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:Menu':             'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:Form':             'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.Neos.NodeTypes:AssetList':        'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.NeosDemoTypo3Org:Homepage':       'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.NeosDemoTypo3Org:Chapter':        'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.NeosDemoTypo3Org:ChapterMenu':    'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.NeosDemoTypo3Org:Flickr':         'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.NeosDemoTypo3Org:YouTube':        'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.NeosDemoTypo3Org:Carousel':       'TYPO3\TYPO3CR\Domain\Model\Node'
+        'TYPO3.NeosDemoTypo3Org:Registration':   'TYPO3\TYPO3CR\Domain\Model\Node'
+        'Flowpack.Neos.FrontendLogin:LoginForm': 'TYPO3\TYPO3CR\Domain\Model\Node'
+
+    classIdentifierToTypeNameMap:
+      value:
+        'TYPO3CR\Node(unstructured)':                          'unstructured'
+        'TYPO3CR\Node(TYPO3.Neos:ContentCollection)':          'TYPO3.Neos:ContentCollection'
+        'TYPO3CR\Node(TYPO3.Neos:Shortcut)':                   'TYPO3.Neos:Shortcut'
+        'TYPO3CR\Node(TYPO3.Neos:PluginView)':                 'TYPO3.Neos:PluginView'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:Page)':             'TYPO3.Neos.NodeTypes:Page'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:Text)':             'TYPO3.Neos.NodeTypes:Text'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:Image)':            'TYPO3.Neos.NodeTypes:Image'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:TextWithImage)':    'TYPO3.Neos.NodeTypes:TextWithImage'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:Headline)':         'TYPO3.Neos.NodeTypes:Headline'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:TwoColumn)':        'TYPO3.Neos.NodeTypes:TwoColumn'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:ThreeColumn)':      'TYPO3.Neos.NodeTypes:ThreeColumn'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:FourColumn)':       'TYPO3.Neos.NodeTypes:FourColumn'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:Menu)':             'TYPO3.Neos.NodeTypes:Menu'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:Form)':             'TYPO3.Neos.NodeTypes:Form'
+        'TYPO3CR\Node(TYPO3.Neos.NodeTypes:AssetList)':        'TYPO3.Neos.NodeTypes:AssetList'
+        'TYPO3CR\Node(TYPO3.NeosDemoTypo3Org:Homepage)':       'TYPO3.NeosDemoTypo3Org:Homepage'
+        'TYPO3CR\Node(TYPO3.NeosDemoTypo3Org:Chapter)':        'TYPO3.NeosDemoTypo3Org:Chapter'
+        'TYPO3CR\Node(TYPO3.NeosDemoTypo3Org:ChapterMenu)':    'TYPO3.NeosDemoTypo3Org:ChapterMenu'
+        'TYPO3CR\Node(TYPO3.NeosDemoTypo3Org:Flickr)':         'TYPO3.NeosDemoTypo3Org:Flickr'
+        'TYPO3CR\Node(TYPO3.NeosDemoTypo3Org:YouTube)':        'TYPO3.NeosDemoTypo3Org:YouTube'
+        'TYPO3CR\Node(TYPO3.NeosDemoTypo3Org:Carousel)':       'TYPO3.NeosDemoTypo3Org:Carousel'
+        'TYPO3CR\Node(TYPO3.NeosDemoTypo3Org:Registration)':   'TYPO3.NeosDemoTypo3Org:Registration'
+        'TYPO3CR\Node(Flowpack.Neos.FrontendLogin:LoginForm)': 'Flowpack.Neos.FrontendLogin:LoginForm'
