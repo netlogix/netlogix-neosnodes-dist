@@ -5,7 +5,10 @@
 /Build/Resources
 /Configuration/
 /Data/
-/Packages/
+/Packages/*
+!/Packages/Application
+/Packages/Application/*
+!/Packages/Application/Netlogix.JsonApiOrg.NeosNodes
 /Web/
 /bin/
 /Readme.txt
