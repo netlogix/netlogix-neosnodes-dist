@@ -1,0 +1,29 @@
+#                                                                        #
+# Routes configuration                                                   #
+#                                                                        #
+# This file contains the configuration for the MVC router.               #
+# Just add your own modifications as necessary.                          #
+#                                                                        #
+# Please refer to the Flow manual for possible configuration options.    #
+#                                                                        #
+
+##
+# TYPO3 Neos subroutes
+
+-
+  name: 'nodes'
+  uriPattern: 'api/<NodesSubroutes>'
+  defaults:
+    '@format': 'html'
+  subRoutes:
+    NodesSubroutes:
+      package: Netlogix.JsonApiOrg.NeosNodes
+
+-
+  name: 'TYPO3 Neos'
+  uriPattern: '<TYPO3NeosSubroutes>'
+  subRoutes:
+    'TYPO3NeosSubroutes':
+      package: 'TYPO3.Neos'
+      variables:
+        'defaultUriSuffix': '.html'

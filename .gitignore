@@ -3,9 +3,13 @@
 /Build/BuildEssentials
 /Build/Reports
 /Build/Resources
-/Configuration/
+/Configuration/*
+!/Configuration/Routes.yaml
 /Data/
-/Packages/
+/Packages/*
+!/Packages/Application
+/Packages/Application/*
+!/Packages/Application/Netlogix.JsonApiOrg.NeosNodes
 /Web/
 /bin/
 /Readme.txt

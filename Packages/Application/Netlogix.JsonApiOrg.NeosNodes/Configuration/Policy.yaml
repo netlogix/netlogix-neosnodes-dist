@@ -1,0 +1,14 @@
+privilegeTargets:
+
+  'TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+
+    'Netlogix.JsonApiOrg.NeosNodes:AllControllerActions':
+      matcher: 'method(Netlogix\JsonApiOrg\NeosNodes\Controller\(Node|Command)Controller->(.*)Action())'
+
+roles:
+
+  'TYPO3.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'Netlogix.JsonApiOrg.NeosNodes:AllControllerActions'
+        permission: GRANT

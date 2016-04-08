@@ -1,0 +1,35 @@
+Netlogix:
+  JsonApiOrg:
+    NeosNodes:
+
+    #                                                                        #
+    # Node objects are easy since they have all the same values for          #
+    # "relationshipsToBeApiExposed" and know their public API properties by  #
+    # looking up the property names of TYPO3CR/Node.                         #
+    #                                                                        #
+    # Because this yaml configuraiton basically reflects the PHP mode of     #
+    # commands pretty well, we might switch to reflection based              #
+    # at some point in time.                                                 #
+    #                                                                        #
+
+      exposingConfiguration:
+
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\CreateNodeCommand':
+          attributesToBeApiExposed: ['type']
+          relationshipsToBeApiExposed:
+            parent: 'single'
+
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\MoveNodeCommand':
+          attributesToBeApiExposed: ['position']
+          relationshipsToBeApiExposed:
+            node: 'single'
+            targetNode: 'single'
+
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\PublishAllCommand':
+          attributesToBeApiExposed: ['targetWorkspaceName', 'sourceWorkspaceName']
+          relationshipsToBeApiExposed: []
+
+        'Netlogix\JsonApiOrg\NeosNodes\Domain\Command\PublishNodesCommand':
+          attributesToBeApiExposed: ['targetWorkspaceName']
+          relationshipsToBeApiExposed:
+            nodes: 'collection'

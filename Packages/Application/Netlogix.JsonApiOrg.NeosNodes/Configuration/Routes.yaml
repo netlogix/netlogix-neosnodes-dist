@@ -1,0 +1,86 @@
+#                                                                        #
+# No matter which action is to be called based on HTTP_METHOD, there's   #
+# always only indexAction and showRelatedAction here.                    #
+#                                                                        #
+
+# Node
+
+-
+  name: 'Node - relationship'
+  uriPattern: 'nodes/relationships/{relationshipName}'
+  toLowerCase: false
+  defaults:
+    '@package':    'Netlogix.JsonApiOrg.NeosNodes'
+    '@controller': 'Node'
+    '@action':     'index'
+    '@format':     'json'
+  appendExceedingArguments: TRUE
+  httpMethods: ['OPTIONS', 'GET']
+
+-
+  name: 'Node - index and show'
+  uriPattern: 'nodes'
+  defaults:
+    '@package':    'Netlogix.JsonApiOrg.NeosNodes'
+    '@controller': 'Node'
+    '@action':     'index'
+    '@format':     'json'
+  appendExceedingArguments: TRUE
+  httpMethods: ['OPTIONS', 'GET']
+
+-
+  name: 'Node - related'
+  uriPattern: 'nodes/{relationshipName}'
+  toLowerCase: false
+  defaults:
+    '@package':    'Netlogix.JsonApiOrg.NeosNodes'
+    '@controller': 'Node'
+    '@action':     'showRelated'
+    '@format':     'json'
+  appendExceedingArguments: TRUE
+  httpMethods: ['OPTIONS', 'GET']
+
+
+# Command
+
+-
+  name: 'Command - create'
+  uriPattern: 'commands'
+  defaults:
+    '@package':    'Netlogix.JsonApiOrg.NeosNodes'
+    '@controller': 'Command'
+    '@action':     'index'
+    '@format':     'json'
+  httpMethods: ['OPTIONS', 'POST']
+
+-
+  name: 'Command - show'
+  uriPattern: 'commands/{command}'
+  defaults:
+    '@package':    'Netlogix.JsonApiOrg.NeosNodes'
+    '@controller': 'Command'
+    '@action':     'index'
+    '@format':     'json'
+  httpMethods: ['OPTIONS', 'GET']
+
+-
+  name: 'Command - relationship'
+  uriPattern: 'commands/{command}/relationships/{relationshipName}'
+  toLowerCase: false
+  defaults:
+    '@package':    'Netlogix.JsonApiOrg.NeosNodes'
+    '@controller': 'Command'
+    '@action':     'index'
+    '@format':     'json'
+  httpMethods: ['OPTIONS', 'GET']
+
+-
+  name: 'Command - related'
+  uriPattern: 'commands/{command}/{relationshipName}'
+  toLowerCase: false
+  defaults:
+    '@package':    'Netlogix.JsonApiOrg.NeosNodes'
+    '@controller': 'Command'
+    '@action':     'showRelated'
+    '@format':     'json'
+  httpMethods: ['OPTIONS', 'GET']
