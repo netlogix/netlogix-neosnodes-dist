@@ -3,7 +3,8 @@
 /Build/BuildEssentials
 /Build/Reports
 /Build/Resources
-/Configuration/
+/Configuration/*
+!/Configuration/Routes.yaml
 /Data/
 /Packages/*
 !/Packages/Application
